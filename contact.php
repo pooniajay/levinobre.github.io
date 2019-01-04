@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="jameson, lopp, bitcoin, crypto, cypherpunk" />
+<meta name="keywords" content="levi, nobre, bitcoin, crypto, cypherpunk" />
 <meta name="Robots" content="index,follow" />
-<title>Jameson Lopp :: Contact</title>
+<title>Levi Nobre :: Contact</title>
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -58,18 +58,6 @@ else { document.getElementById(d).style.display = "none"; }
 }
 //--></script>
 
-<!-- Google Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-2071667-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
 </head>
 
 <body onLoad="MM_preloadImages('images/twitter-roll.gif','images/github-roll.gif','images/21-roll.gif','images/keybase-roll.gif')">
@@ -78,7 +66,7 @@ else { document.getElementById(d).style.display = "none"; }
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myDefaultNavbar1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html">Jameson Lopp</a> </div>
+      <a class="navbar-brand" href="index.html">Levi Nobre</a> </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="myDefaultNavbar1">
       <ul class="nav navbar-nav">
@@ -169,7 +157,7 @@ else { document.getElementById(d).style.display = "none"; }
           <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12">
             <h3>Want a Guaranteed Response?</h3>
             <p data_temp_dwid="1">
-              <a href="https://earn.com/lopp/" target="_blank">
+              <a href="https://earn.com/levinobre/" target="_blank">
                 <button type="button" class="btn btn-success">Get in touch on earn.com</button>
               </a>
             </p>
@@ -188,14 +176,14 @@ else { document.getElementById(d).style.display = "none"; }
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1 col-md-10 col-lg-10 col-xs-offset-0 col-xs-12">
         <p class="text-right"><strong><a href="pgpkey.html" target="_blank">PGP KEY</a></strong>
-          <a href="https://twitter.com/lopp?ref_src=twsrc%5Etfw&ref_url=http%3A%2F%2Flopp.net%2F" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Twitter','','images/twitter-roll.gif',1)" target="_blank"><img src="images/twitter.gif" alt="Twitter" width="20" height="17" id="Twitter">
+          <a href="https://twitter.com/levi_nobre?ref_src=twsrc%5Etfw&ref_url=http%3A%2F%2Flevinobre.com%2F" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Twitter','','images/twitter-roll.gif',1)" target="_blank"><img src="images/twitter.gif" alt="Twitter" width="20" height="17" id="Twitter">
           </a>
-          <a href="https://github.com/jlopp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Github','','images/github-roll.gif',1)" target="_blank"><img src="images/github.gif" alt="Github" width="24" height="20" id="Github">
+          <a href="https://github.com/levinobre" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Github','','images/github-roll.gif',1)" target="_blank"><img src="images/github.gif" alt="Github" width="24" height="20" id="Github">
           </a>
-          <a href="https://21.co/lopp/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('21','','images/21-roll.gif',1)" target="_blank"><img src="images/21.gif" alt="21" width="24" height="20" id="21">
+          <a href="https://21.co/levinobre/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('21','','images/21-roll.gif',1)" target="_blank"><img src="images/21.gif" alt="21" width="24" height="20" id="21">
           </a>
-          <a href="https://keybase.io/lopp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Keybase','','images/keybase-roll.gif',1)" target="_blank"><img src="images/keybase.gif" alt="Keybase" width="24" height="20" id="Keybase">
-          </a> <strong><a href="https://onename.com/lopp" target="_blank">ONENAME</a></strong> </p>
+          <a href="https://keybase.io/levi_nobre" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Keybase','','images/keybase-roll.gif',1)" target="_blank"><img src="images/keybase.gif" alt="Keybase" width="24" height="20" id="Keybase">
+          </a></p>
       </div>
     </div>
   </div>
