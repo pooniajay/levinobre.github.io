@@ -1,6 +1,6 @@
 <?php
 // set the following two values and the rest of the contact script should work
-const COINHIVE_SECRET_KEY = "MasSJE3Vn3dNH0IJCD89j0yMG7S4pzN1";
+const COINHIVE_SECRET_KEY = "A6K9ADVOxYr4O0DgtCgCsEfYCYTRoxIO";
 const YOUR_EMAIL_ADDRESS = "hello@levinobre.com";
 $nameErr = $emailErr = $subjectErr = $messageErr = "";
 $name = $email = $subject = $emailBody = "";

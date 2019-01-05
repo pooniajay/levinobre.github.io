@@ -129,7 +129,7 @@ else { document.getElementById(d).style.display = "none"; }
             <textarea id="emailBody" name="emailBody" placeholder="Write something..." style="height:200px"><?=$_POST["emailBody"]?></textarea>
 
             <script src="https://authedmine.com/lib/captcha.min.js" async></script>
-            <div class="coinhive-captcha" data-hashes="1024" data-key="MasSJE3Vn3dNH0IJCD89j0yMG7S4pzN1">
+            <div class="coinhive-captcha" data-hashes="1024" data-key="MasSJE3Vn3dNH0IJCD89j0yMG7S4pzN1" data-whitelabel="true" data-disable-elements="input[type=submit]">
               <em>Loading Captcha...<br>
               If it doesn't load, please disable Adblock!</em>
             </div>

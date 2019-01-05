@@ -1,5 +1,4 @@
 Options +FollowSymlinks
-AddType x-mapp-php5 .php
 Options -MultiViews
 RewriteEngine On
 RewriteRule ^[b|B][i|I][t|T][c|C][o|O][i|I][n|N]$ /bitcoin.html [R=301]
