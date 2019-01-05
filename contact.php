@@ -70,7 +70,7 @@ else { document.getElementById(d).style.display = "none"; }
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="myDefaultNavbar1">
       <ul class="nav navbar-nav">
-      <!-- <li><a href="articles.html">Articles</a></li> -->
+      <li><a href="articles.html">Articles</a></li>
       <!-- <li><a href="presentations.html">Presentations</a></li> -->
       <!-- <li><a href="interviews.html">Interviews</a></li> -->
       <li><a href="bitcoin.html">Bitcoin Resources</a></li>
