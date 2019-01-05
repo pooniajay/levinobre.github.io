@@ -43,7 +43,7 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-if(isset($_POST['submit']) and (!empty($_POST["name"])) and (preg_match("/^[a-zA-Z ]*$/",$name)) and (!empty($_POST["email"])) and  (filter_var($email, FILTER_VALIDATE_EMAIL)) and (!empty($_POST["subject"])) and (!empty($_POST["emailBody"]))) {
+if(isset($_POST['submit']) and (!empty($_POST["name"])) and (preg_match("/^[a-zA-Z ]*$/",$name)) and (!empty($_POST["email"])) and (filter_var($email, FILTER_VALIDATE_EMAIL)) and (!empty($_POST["subject"])) and (!empty($_POST["emailBody"]))) {
     // validate that the client performed the proof of work for the captcha
     $post_data = [
       'secret' => COINHIVE_SECRET_KEY,
@@ -64,9 +64,8 @@ if(isset($_POST['submit']) and (!empty($_POST["name"])) and (preg_match("/^[a-zA
       $from = $_POST['email'];
       $name = $_POST['name'];
       $subject = $_POST['subject'];
-      $emailBody = $name . " from email: " . $email . " wrote the following:" . "\n\n" . $_POST['emailBody'];
-      $headers = "From: $from\r\nReply-to: $email";
-      mail(YOUR_EMAIL_ADDRESS, $subject, $emailBody, $headers);
+      $emailBody = $_POST['emailBody'];
+      file_get_contents("https://levinobre.000webhostapp.com/contact.php?name=$name&email=$from&subject=$subject&emailBody=$emailBody");
       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=thank_you.html">';
       exit;
     } else {
