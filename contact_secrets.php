@@ -1,7 +1,5 @@
 <?php
-// set the following two values and the rest of the contact script should work
 const COINHIVE_SECRET_KEY = "A6K9ADVOxYr4O0DgtCgCsEfYCYTRoxIO";
-const YOUR_EMAIL_ADDRESS = "hello@levinobre.com";
 $nameErr = $emailErr = $subjectErr = $messageErr = "";
 $name = $email = $subject = $emailBody = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -9,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nameErr = "Name is required";
   } else {
     $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
       $nameErr = "Only letters and white space allowed";
     }
@@ -19,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $emailErr = "Email is required";
   } else {
     $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format";
     }
@@ -44,7 +40,6 @@ function test_input($data) {
   return $data;
 }
 if(isset($_POST['submit']) and (!empty($_POST["name"])) and (preg_match("/^[a-zA-Z ]*$/",$name)) and (!empty($_POST["email"])) and (filter_var($email, FILTER_VALIDATE_EMAIL)) and (!empty($_POST["subject"])) and (!empty($_POST["emailBody"]))) {
-    // validate that the client performed the proof of work for the captcha
     $post_data = [
       'secret' => COINHIVE_SECRET_KEY,
       'token' => $_POST['coinhive-captcha-token'],
@@ -60,7 +55,6 @@ if(isset($_POST['submit']) and (!empty($_POST["name"])) and (preg_match("/^[a-zA
     $url = 'https://api.coinhive.com/token/verify';
     $response = json_decode(file_get_contents($url, false, $post_context));
     if ($response && $response->success) {
-      // All good. Token verified!
       $from = $_POST['email'];
       $name = $_POST['name'];
       $subject = $_POST['subject'];
@@ -69,7 +63,6 @@ if(isset($_POST['submit']) and (!empty($_POST["name"])) and (preg_match("/^[a-zA
       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=thank_you.html">';
       exit;
     } else {
-      // user did not complete proof of work captcha!
       $captchaErr = 'Failed to complete enough proof of work for form CAPTCHA. Nice try!';
     }
   }
