@@ -70,7 +70,7 @@ if(isset($_POST['submit']) and (!empty($_POST["name"])) and (preg_match("/^[a-zA
       curl_setopt($chc, CURLOPT_URL, $urlC);
       curl_setopt($chc, CURLOPT_POST, count($fieldsC));
       curl_setopt($chc, CURLOPT_POSTFIELDS, http_build_query($fieldsC));
-      $cresult = curl_exec($chc);
+      curl_exec($chc);
       curl_close($chc);
       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=thank_you.html">';
       exit;
