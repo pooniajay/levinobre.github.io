@@ -74,8 +74,7 @@ else { document.getElementById(d).style.display = "none"; }
       <!-- <li><a href="presentations.html">Presentations</a></li> -->
       <!-- <li><a href="interviews.html">Interviews</a></li> -->
       <li><a href="bitcoin.html">Bitcoin Resources</a></li>
-      <!-- <li class="active"><a href="#">Contact<span class="sr-only">(current)</span></a></li> -->
-      <li class="active"><a href="mailto:hello@levinobre.com">Contact<span class="sr-only">(current)</span></a></li>
+      <li class="active"><a href="#">Contact<span class="sr-only">(current)</span></a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
