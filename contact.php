@@ -9,29 +9,24 @@
 <meta name="keywords" content="levi, nobre, bitcoin, crypto, cypherpunk" />
 <meta name="Robots" content="index,follow" />
 <title>Levi Nobre :: Contact</title>
-
-<!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script type="text/javascript">
-function MM_swapImgRestore() { //v3.0
+function MM_swapImgRestore() {
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
 }
-function MM_preloadImages() { //v3.0
+function MM_preloadImages() {
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
 }
 
-function MM_findObj(n, d) { //v4.01
+function MM_findObj(n, d) {
   var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
     d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
   if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
@@ -39,7 +34,7 @@ function MM_findObj(n, d) { //v4.01
   if(!x && d.getElementById) x=d.getElementById(n); return x;
 }
 
-function MM_swapImage() { //v3.0
+function MM_swapImage() {
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
@@ -63,11 +58,9 @@ else { document.getElementById(d).style.display = "none"; }
 <body onLoad="MM_preloadImages('images/twitter-roll.gif','images/github-roll.gif','images/earn-roll.gif','images/keybase-roll.gif','images/instagram-roll.gif')">
 <nav class="navbar navbar-default col-sm-offset-0 col-sm-12 col-md-offset-0 col-md-12 col-lg-offset-0 col-lg-12">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myDefaultNavbar1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="index.html">Levi Nobre</a> </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="myDefaultNavbar1">
       <ul class="nav navbar-nav">
       <li><a href="articles.html">Articles</a></li>
@@ -77,9 +70,7 @@ else { document.getElementById(d).style.display = "none"; }
       <li class="active"><a href="#">Contact<span class="sr-only">(current)</span></a></li>
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container-fluid -->
 </nav>
 <section class="inner-background">
 <div class="container">
@@ -199,9 +190,7 @@ else { document.getElementById(d).style.display = "none"; }
     </div>
   </div>
 </footer>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.3.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
