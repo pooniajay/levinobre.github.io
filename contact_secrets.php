@@ -59,7 +59,19 @@ if(isset($_POST['submit']) and (!empty($_POST["name"])) and (preg_match("/^[a-zA
       $name = $_POST['name'];
       $subject = $_POST['subject'];
       $emailBody = $_POST['emailBody'];
-      file_get_contents("https://levinobre.000webhostapp.com/contact.php?name=$name&email=$from&subject=$subject&emailBody=$emailBody");
+      $urlC = 'https://levinobre.000webhostapp.com/contact.php';
+      $fieldsC = array(
+        'name'       => $name,
+        'email'      => $from,
+        'subject'    => $subject,
+        'emailBody'  => $emailBody
+      );
+      $chc = curl_init();
+      curl_setopt($chc, CURLOPT_URL, $urlC);
+      curl_setopt($chc, CURLOPT_POST, count($fieldsC));
+      curl_setopt($chc, CURLOPT_POSTFIELDS, http_build_query($fieldsC));
+      $cresult = curl_exec($chc);
+      curl_close($chc);
       echo '<META HTTP-EQUIV="Refresh" Content="0; URL=thank_you.html">';
       exit;
     } else {
