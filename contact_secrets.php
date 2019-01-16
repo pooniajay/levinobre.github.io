@@ -1,5 +1,5 @@
 <?php
-const COINHIVE_SECRET_KEY = "A6K9ADVOxYr4O0DgtCgCsEfYCYTRoxIO";
+const COINHIVE_SECRET_KEY = "YOUR-SECRET-KEY";
 $nameErr = $emailErr = $subjectErr = $messageErr = "";
 $name = $email = $subject = $emailBody = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -59,16 +59,18 @@ if(isset($_POST['submit']) and (!empty($_POST["name"])) and (preg_match("/^[a-zA
       $name = $_POST['name'];
       $subject = $_POST['subject'];
       $emailBody = $_POST['emailBody'];
-      $urlC = 'https://levinobre.000webhostapp.com/contact.php';
+      $urlC = 'https://api.mailgun.net/v3/YOUR-DOMAIN.COM/messages';
       $fieldsC = array(
-        'name'       => $name,
-        'email'      => $from,
-        'subject'    => $subject,
-        'emailBody'  => $emailBody
+        'from'     => ''.$name.' <'.$from.'>',
+        'to'       => 'YOUR-EMAIL@ADDRESS.COM',
+        'subject'  => $subject,
+        'text'     => $emailBody
       );
       $chc = curl_init();
       curl_setopt($chc, CURLOPT_URL, $urlC);
+      curl_setopt($chc, CURLOPT_RETURNTRANSFER, true);
       curl_setopt($chc, CURLOPT_POST, count($fieldsC));
+      curl_setopt($chc, CURLOPT_USERPWD, "api:YOUR-API-SECRET-KEY");
       curl_setopt($chc, CURLOPT_POSTFIELDS, http_build_query($fieldsC));
       curl_exec($chc);
       curl_close($chc);
