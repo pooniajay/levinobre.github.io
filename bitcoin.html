@@ -79,6 +79,42 @@
           document.getElementById(d).style.display = "none";
         }
       }
+
+    // Night mode toggle
+    function toggleDarkLight() {
+      var currentClass = document.body.className;
+      document.body.className = currentClass == "dark" ? "" : "dark";
+      if (document.body.className == "dark") {
+        $("#main-background-section").toggleClass('inner-background inner-background-dark');
+        document.body.style.backgroundColor = "#000000";
+        document.body.style.color = "#ffffff";
+        document.querySelectorAll("div").forEach(function(element) {
+            element.style.backgroundColor = "#000000";
+            element.style.color = "#ffffff";
+        });
+        document.querySelectorAll("nav").forEach(function(element) {
+           element.style.backgroundColor = "#000000";
+           element.style.color = "#ffffff";
+        });
+        document.querySelectorAll("a").forEach(function(element) {
+            element.style.color = "#deb903";
+            element.style.hoverColor = "#ffffff";
+            element.style.visitedColor = "#ff0000";
+        });
+      } else {
+        $("#main-background-section").toggleClass('inner-background-dark inner-background');
+        document.body.style.backgroundColor = "#ffffff";
+        document.body.style.color = "#000000";
+        document.querySelectorAll("div").forEach(function(element) {
+            element.style.backgroundColor = "#ffffff";
+            element.style.color = "#000000";
+        });
+        document.querySelectorAll("nav").forEach(function(element) {
+            element.style.backgroundColor = "#ffffff";
+            element.style.color = "#000000";
+        });
+      }
+    }
       //-->
   </script>
 
@@ -101,7 +137,7 @@
       </div>
     </div>
   </nav>
-  <section class="inner-background">
+  <section id="main-background-section" class="inner-background">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 text-left col-lg-offset-0 col-lg-12">
@@ -113,7 +149,7 @@
       <div class="row">
         <div class="col-xs-12 text-left col-lg-offset-1 col-lg-8 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
           <h1>Bitcoin Resources</h1>
-          <p>Bitcoin is a revolutionary system that is quite complex and has a steep learning curve. Make sure you have a decent grasp of the system before you store a significant amount of value in it. Note that this list is open source; please <a href="https://github.com/levinobre/levinobre.com/blob/master/bitcoin.html" target="_blank">suggest additions on GitHub</a>!</p>
+          <p>Bitcoin is a revolutionary system that is quite complex and has a steep learning curve. Make sure you have a decent grasp of the system before you store a significant amount of value in it. Note that this list is open source; please <a href="https://github.com/levinobre/levinobre.com/blob/master/bitcoin.html" target="_blank">suggest additions on GitHub</a>! Toggle dark mode here: <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌓</button></p>
           <br>
         </div>
       </div>
@@ -205,7 +241,6 @@
             <li><a href="https://t.me/BitcoinCore" target="_blank" rel="noopener">Bitcoin Core Telegram</a></li>
             <li><a href="https://bitcointalk.org/" target="_blank" rel="noopener">Bitcoin Talk Forum</a></li>
             <li><a href="https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev" target="_blank" rel="noopener">Bitcoin Development Mailing List</a></li>
-            <li><a href="http://telegramcryptogroups.com" target="_blank" rel="noopener">List of Telegram crypto groups</a></li>
           </ul>
           <br>
           <h3>Miscellaneous Statistics:</h3>
@@ -253,15 +288,15 @@
           <h3>Block Explorers:</h3>
           <ul>
             <li><a href="https://apirone.com/btc/" target="_blank" rel="noopener">Apirone.com</a></li>
-            <li><a href="http://learnmeabitcoin.com/browser/node/" target="_blank" rel="noopener">Blockchain Browser and Tutorial</a></li>
+            <li><a href="https://bitaps.com/" target="_blank" rel="noopener">bitaps</a></li>
             <li><a href="https://blockstream.info/" target="_blank" rel="noopener">Blockstream.info</a></li>
             <li><a href="https://live.blockcypher.com/btc/" target="_blank" rel="noopener">BlockCypher</a></li>
+            <li><a href="https://btc.chaintools.io/" target="_blank" rel="noopener">btc.chaintools.io</a></li>
             <li><a href="https://oxt.me/" target="_blank" rel="noopener">OXT</a> - blockchain explorer + privacy analysis</li>
             <li><a href="https://blockpath.com/" target="_blank" rel="noopener">Blockpath</a> Explorer + Addr/Tx Relationships</li>
             <li><a href="https://chain.so/" target="_blank" rel="noopener">SoChain</a></li>
             <li><a href="https://www.walletexplorer.com/" target="_blank" rel="noopener">Wallet Explorer</a></li>
             <li><a href="http://yogh.io/" target="_blank" rel="noopener">Yogh.io</a> - raw data block explorer</li>
-            <li><a href="https://btc.chaintools.io/" target="_blank" rel="noopener">btc.chaintools.io</a> - open source, RPC-driven</li>
           </ul>
           <br>
           <h3>Visualizations:</h3>
@@ -343,6 +378,7 @@
             <li><a href="http://www.michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/" target="_blank" rel="noopener">How the Bitcoin Protocol Actually Works</a></li>
             <li><a href="https://github.com/ChristopherA/Learning-Bitcoin-from-the-Command-Line" target="_blank" rel="noopener">Learning Bitcoin from the Command Line</a></li>
             <li><a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/book.asciidoc" target="_blank" rel="noopener">Mastering Bitcoin</a></li>
+            <li><a href="https://github.com/jimmysong/programmingbitcoin/blob/master/all.asciidoc" target="_blank" rel="noopener">Programming Bitcoin</a></li>
             <li><a href="https://www.manning.com/books/grokking-bitcoin" target="_blank" rel="noopener">Grokking Bitcoin</a></li>
             <li><a href="https://github.com/Xel/Blockchain-stuff#bitcoin" target="_blank" rel="noopener">Epic List of Bitcoin Books</a></li>
             <li><a href="http://davidederosa.com/basic-blockchain-programming/" target="_blank" rel="noopener">Intro to Bitcoin for Developers</a></li>
@@ -350,7 +386,7 @@
             <li><a href="http://www.righto.com/2014/02/bitcoins-hard-way-using-raw-bitcoin.html" target="_blank" rel="noopener">Using the Raw Bitcoin Protocol</a></li>
             <li><a href="http://www.samlewis.me/2017/06/a-peek-under-bitcoins-hood/" target="_blank" rel="noopener">A Peek Under Bitcoin's Hood</a></li>
             <li><a href="https://codesuppository.blogspot.jp/2014/01/how-to-parse-bitcoin-blockchain.html" target="_blank" rel="noopener">How to Parse the Bitcoin Blockchain</a></li>
-            <li><a href="https://github.com/jimmysong/programmingbitcoin/blob/master/ch01.asciidoc" target="_blank" rel="noopener">Programming Bitcoin</a></li>
+            <li><a href="https://bitcoindev.network" target="_blank" rel="noopener">Bitcoin Developer Network (BDN)</a></li>
           </ul>
           <br>
           <h3>Developer Tools:</h3>
@@ -361,6 +397,7 @@
             <li><a href="https://github.com/straumat/blockchain2graph" target="_blank" rel="noopener">Bitcoin Graph Database Builder</a></li>
             <li><a href="https://github.com/bitcoinjs/bitcoinjs-lib" target="_blank" rel="noopener"> Bitcoin JavaScript Library</a></li>
             <li><a href="https://bitcoinj.github.io/" target="_blank" rel="noopener">Bitcoin Java Library</a></li>
+            <li><a href="https://ofek.github.io/bit/" target="_blank" rel="noopener">Bitcoin Python Library</a></li>
             <li><a href="https://siminchen.github.io/bitcoinIDE/build/editor.html" target="_blank" rel="noopener">Bitcoin Script IDE</a></li>
             <li><a href="https://github.com/kallewoof/btcdeb" target="_blank" rel="noopener">Bitcoin Script Debugger 2</a></li>
             <li><a href="https://nioctib.tech/" target="_blank" rel="noopener">Bitcoin Script Debugger 3</a></li>
@@ -369,13 +406,11 @@
             <li><a href="https://iancoleman.io/bip39/" target="_blank" rel="noopener">HD Key Derivation Tool</a></li>
             <li><a href="https://github.com/cryptocoinjs/hdkey" target="_blank" rel="noopener">NodeJS HD Key Library</a></li>
             <li><a href="https://libbitcoin.org/" target="_blank" rel="noopener">Libbitcoin</a></li>
-            <li><a href="http://www.omnilayer.org/" target="_blank" rel="noopener">Omni Layer</a></li>
-            <li><a href="https://opentimestamps.org/" target="_blank" rel="noopener">OpenTimestamps</a></li>
+            <li><a href="https://github.com/rsbondi/nodes-debug" target="_blank" rel="noopener">RPC GUI tool</a></li>
             <li><a href="https://github.com/samr7/vanitygen" target="_blank" rel="noopener">Vanity Address Generator</a></li>
             <li><a href="https://medium.com/@lopp/how-to-generate-a-custom-bitcoin-address-with-an-amd-gpu-on-ubuntu-f3f10cfdffc6" target="_blank" rel="noopener">GPU Vanity Address Generator</a></li>
             <li><a href="https://github.com/gurnec/btcrecover" target="_blank" rel="noopener">Wallet Recovery (brute forcing) tool</a></li>
             <li><a href="https://github.com/jlopp/xpub-converter" target="_blank" rel="noopener">xpub Version Converter</a></li>
-            <li><a href="https://github.com/rsbondi/nodes-debug" target="_blank" rel="noopener">Multi node RPC GUI tool</a></li>
           </ul>
           <br>
           <h3>Security:</h3>
@@ -399,9 +434,10 @@
           <h3>Privacy:</h3>
           <ul>
             <li><a href="https://www.openbitcoinprivacyproject.org/product-reviews/" target="_blank" rel="noopener">Open Bitcoin Privacy Project's Wallet Reviews</a></li>
-            <li><a href="https://anonymousbitcoinbook.com/" target="_blank" rel="noopener">Anonymous Bitcoin Book</a> - how to maintain your privacy</li>
+            <li><a href="https://en.bitcoin.it/wiki/Privacy" target="_blank" rel="noopener">Bitcoin Wiki Article</a></li>
             <li><a href="https://bitcoin.org/en/protect-your-privacy" target="_blank" rel="noopener">Bitcoin.org's Privacy Guide</a></li>
-            <li><a href="https://github.com/JoinMarket-Org/joinmarket-clientserver" target="_blank" rel="noopener">JoinMarket: Improve the Privacy of Your Bitcoins and Earn Fees</a></li>
+            <li><a href="https://medium.com/human-rights-foundation-hrf/privacy-and-cryptocurrency-part-i-how-private-is-bitcoin-e3a4071f8fff" target="_blank" rel="noopener">Bitcoin Privacy Primer</a></li>
+            <li><a href="https://github.com/JoinMarket-Org/joinmarket-clientserver" target="_blank" rel="noopener">JoinMarket</a> (CoinJoin software)</li>
             <li><a href="https://joinmarket.me/blog/blog/tumblebit-for-the-tumble-curious/" target="_blank" rel="noopener">How TumbleBit Works</a></li>
             <li><a href="https://medium.com/@lopp/how-to-run-bitcoin-as-a-tor-hidden-service-on-ubuntu-cff52d543756" target="_blank" rel="noopener">How to Run Bitcoin as a Tor Hidden Service on Ubuntu</a></li>
             <li><a href="https://github.com/nopara73/ZeroLink/" target="_blank" rel="noopener">ZeroLink: The Bitcoin Fungibility Framework</a></li>
@@ -495,6 +531,7 @@
             <li><a href="https://www.youtube.com/channel/UCDUNNUNPAnv2epBYrxYXD_Q/videos" target="_blank" rel="noopener">San Jose Bitcoin Conference 2013</a></li>
             <li><a href="https://scalingbitcoin.org/presentations" target="_blank" rel="noopener">Scaling Bitcoin Workshop</a></li>
             <li><a href="https://www.youtube.com/channel/UCREs0ConyCR2sEFf-DrLRMw" target="_blank" rel="noopener">SF Bitcoin Devs</a></li>
+            <li><a href="https://www.youtube.com/watch?v=AwYD4Hghxmg&list=PLK8GLpbgi4-IRD-xlSpLVdN7nRJ3KC1KM" target="_blank" rel="noopener">Stanford Blockchain Conference</a></li>
             <li><a href="https://www.youtube.com/channel/UC5LIx-EmX-f8QIgjFNOjJxw/videos" target="_blank" rel="noopener">Texas Bitcoin Conference</a></li>
             <li><a href="https://www.youtube.com/channel/UCBwksHClcQDU7j9HVnYD7zg" target="_blank" rel="noopener">The Atlanta Blockchain Conference</a></li>
             <li><a href="https://www.youtube.com/channel/UC8rNDpoPrOjYW8LIzyy9cyw/videos?shelf_id=0&sort=dd&view=0" target="_blank" rel="noopener">The Bitcoin Conference 2016</a></li>
@@ -619,7 +656,7 @@
             <li><a href="https://onchainfx.com/" target="_blank" rel="noopener">Onchain FX</a></li>
             <li><a href="https://coinmarketcap.com/" target="_blank" rel="noopener">Coin Market Caps</a></li>
             <li><a href="https://coincall.io" target="_blank" rel="noopener">Market prices and portfolio feature</a></li>
-            <li><a href="http://cryptomaps.org/" target="_blank" rel="noopener">Crypto Market Cap Visualization</a></li>
+            <li><a href="https://coin360.com/" target="_blank" rel="noopener">Crypto Market Cap Visualization</a></li>
             <li><a href="http://bitcoinity.org/markets/bitstamp/USD" target="_blank" rel="noopener">Bitcoinity</a></li>
             <li><a href="https://bitcoinaverage.com/en/bitcoin-price/btc-to-usd" target="_blank" rel="noopener">Bitcoin Average</a></li>
             <li><a href="https://data.bitcoinity.org/markets/volume/30d?c=e&t=b" target="_blank" rel="noopener">Bitcoin Market Metrics</a></li>
@@ -636,6 +673,7 @@
             <li><a href="https://bitcoin.tax/" target="_blank" rel="noopener">BitcoinTaxes</a></li>
             <li><a href="https://cryptfolio.com/tax" target="_blank" rel="noopener">CryptFolio</a></li>
             <li><a href="https://www.cryptotrader.tax/" target="_blank" rel="noopener">CryptoTrader.tax</a></li>
+            <li><a href="https://tokentax.co/" target="_blank" rel="noopener">TokenTax</a></li>
             <li><a href="https://www.zenledger.io/" target="_blank" rel="noopener">ZenLedger</a></li>
           </ul>
           <br>
@@ -659,6 +697,7 @@
             <li><a href="https://acceptlightning.com/" target="_blank" rel="noopener">Another list/map of stores</a></li>
             <li><a href="https://github.com/Stadicus/guides/blob/master/raspibolt/README.md" target="_blank" rel="noopener">RPi Lightning node guide</a></li>
             <li><a href="https://lndecode.com/" target="_blank" rel="noopener">Lightning Payment Request Decoder</a></li>
+            <li><a href="https://ion.radar.tech/" target="_blank" rel="noopener">Radar ION Guide</a></li>
           </ul>
           <br>
           <h3>Economics:</h3>
@@ -700,7 +739,6 @@
           <br>
           <h3>Crypto Charity:</h3>
           <ul>
-            <li><a href="https://tallyco.in/" target="_blank" rel="noopener">Tallycoin Fundraising Platform accepting BTC/Lightning</a></li>
             <li><a href="https://en.bitcoin.it/wiki/Donation-accepting_organizations_and_projects" target="_blank" rel="noopener">Charities that accept BTC</a></li>
             <li><a href="http://bitcoinforcharity.com/bitcoin-charity-list/" target="_blank" rel="noopener">More BTC acccepting charities</a></li>
             <li><a href="https://www.bitgivefoundation.org/" target="_blank" rel="noopener">BitGive</a></li>
@@ -711,12 +749,14 @@
             <li><a href="http://dignitasinternational.org/give/bitcoin/" target="_blank" rel="noopener">Dignitas International</a></li>
             <li><a href="http://www.maps.org/donate-redirect/cryptocurrency" target="_blank" rel="noopener">Multidisciplinary Association for Psychedelic Studies</a></li>
             <li><a href="https://www.pathwaystoeducation.ca/donate-bitcoin" target="_blank" rel="noopener">Pathways to Education</a></li>
+            <li><a href="https://tallyco.in/" target="_blank" rel="noopener">Tallycoin Fundraising Platform</a></li>
             <li><a href="http://warchild.ca/donate/" target="_blank" rel="noopener">War Child</a></li>
           </ul>
           <br>
           <h3>Legal:</h3>
           <ul>
             <li><a href="https://blockchainlawguide.com/" target="_blank" rel="noopener">Blockchain Law Guide</a></li>
+            <li><a href="https://theblockchainmonitor.com" target="_blank" rel="noopener">The Blockchain Monitor</a></li>
             <li><a href="https://coincenter.org/" target="_blank" rel="noopener">Coin Center</a></li>
             <li><a href="https://www.mishcon.com/crypto" target="_blank" rel="noopener">Cryptocurrency Case Tracker</a></li>
             <li><a href="https://www.morrisoncohen.com/news-page?itemid=471" target="_blank" rel="noopener">Cryptocurrency Litigation Tracker</a></li>

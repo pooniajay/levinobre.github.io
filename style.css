@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body { 
+body {
     font-family: 'Overpass Mono', monospace;
 	text-align: left;
 }
@@ -46,6 +46,12 @@ h1 {
 	width: 100%;
     height: auto;
 	background-image: url(images/bkg-1.jpg);
+    background-size: cover;
+}
+.inner-background-dark {
+	width: 100%;
+    height: auto;
+	background-image: url(images/bkg-2.jpg);
     background-size: cover;
 }
 .well{
@@ -98,7 +104,7 @@ a:visited{
  /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
+    padding: 12px; /* Some padding */
     border: 1px solid #ccc; /* Gray border */
     border-radius: 4px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
