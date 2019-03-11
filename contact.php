@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link href="style.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script>
+<link type="text/css" rel="stylesheet" href="css/jquery.hashcash.io.min.css" media="all" />
+<script src="js/jquery.hashcash.io.min.js"></script>
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -117,12 +120,13 @@ else { document.getElementById(d).style.display = "none"; }
             <label for="message">Message</label><span class="error"> <?= $messageErr; ?></span>
             <textarea id="emailBody" name="emailBody" placeholder="Write something..." style="height:200px"><?=$_POST["emailBody"]?></textarea>
 
-            <script src="https://authedmine.com/lib/captcha.min.js" async></script>
-            <div class="coinhive-captcha" data-hashes="1024" data-key="MasSJE3Vn3dNH0IJCD89j0yMG7S4pzN1" data-whitelabel="true" data-disable-elements="input[type=submit]">
-              <em>Loading Captcha...<br>
-              If you can read this, you need to disable your ad blocker!</em>
-            </div>
             <input type="submit" name="submit" value="Submit"><span class="error"> <?= $captchaErr; ?></span>
+            <script>
+              $("form input[type=submit]").hashcash({
+                key: "ff030c4d-804a-40d6-8ece-035f363a6bb7",
+                complexity: 0.1
+              });
+            </script>
         </form>
         <br>
         <br>
